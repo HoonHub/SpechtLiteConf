@@ -1,26 +1,30 @@
-# Configuration files of [SpechtLite](https://github.com/zhuhaow/SpechtLite)
+# Configuration template for [SpechtLite](https://github.com/zhuhaow/SpechtLite)
 
-##Description of each file
+This is a template for SpechtLite designed for Chinese users.
 
-- [**Conf.yaml**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/Conf.yaml): Main configuration file, configured specific proxy servers and judgment rules
+## Explanation of each file
 
-- [**pollutedip**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/pollutedip): Polluted IP Lists, referenced by [Wikipedia](https://zh.m.wikipedia.org/zh-cn/域名服务器缓存污染)
+- [**Conf.yaml**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/Conf.yaml): Main configuration file, where all adapters and rules reside. You may want to copy and rename this file if you want to have several different settings to switch between.
 
-- [**directlist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/directlist): Direct host domain list
+- [**pollutedip**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/pollutedip): Polluted IP Lists according to  [Wikipedia](https://zh.m.wikipedia.org/zh-cn/域名服务器缓存污染).
 
-- [**directiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/directiprange): Direct IP list
+- [**directlist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/directlist): List of hosts that you want to connect directly, in regular expressions.
 
-- [**proxylist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/proxylist): Proxy host domain list
+- [**directiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/directiprange): List of ip ranges that you want to connect to directly without any proxy.
 
-- [**proxyiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/proxyiprange): Proxy IP list
+- [**proxylist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/proxylist): List of hosts that you want to connect to through proxy, in regular expressions.
 
-- [**rejectlist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/rejectlist): Reject host domain list (AD block)
+- [**proxyiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/proxyiprange): List of ip ranges that you want to connect to through proxy.
 
-- [**rejectiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/rejectiprange): Reject IP list (AD block)
- >  All **Reject** lists are converted from **逗bi极客**'s Surge rule
+- [**rejectlist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/rejectlist): Any hosts you want to block. Currectly it contains a set of ad sites.
 
-##How to Up and Running
+- [**rejectiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/rejectiprange): Any IP ranges you want to block. Currectly it contains a set of ad sites.
 
-Click **`Open config folder`** and copy all files except **README.md** to your **_.SpechtLite_** folder, then **`Reload config`**.
+The hosts and ips in **Reject** lists are from **逗bi极客**'s Surge rule.
 
-Finally, start proxy by click the name, and check **`Set as system proxy`**. Or you can set it yourself by setting system HTTP/HTTPS proxy to `127.0.0.1:port`, SOCKS5 proxy (this will proxy things such as Mail.app) to `127.0.0.1:port+1` in **System Preferences**.
+## Get Up and Running
+
+Click **`Open config folder`** and copy all files except **README.md** to that (`.SpechtLite`) folder. Set up the correct adapter configuration according to you proxy settings. Then **`Reload config`**.
+
+Start proxy by click the name of the config file in the menu, and check **`Set as system proxy`**. 
+Or you can set it yourself by setting system HTTP/HTTPS proxy to `127.0.0.1:port`, SOCKS5 proxy (this will proxy things such as Mail.app) to `127.0.0.1:port+1` in **System Preferences**.
