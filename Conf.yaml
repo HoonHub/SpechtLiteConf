@@ -57,31 +57,31 @@ adapter:
 rule:
   - type: iplist
   # Forward polluted host IP address
-    file: ~/.SpechtLite/pollutedip.conf
+    file: ~/.SpechtLite/pollutedip.txt
     adapter: proxy
   - type: list
   # Forward requests based on whether the host domain matches the given regular expressions.
-    file: ~/.SpechtLite/directlist.conf
+    file: ~/.SpechtLite/directlist.txt
     adapter: direct
   - type: iplist
   # Forward requests based on the IP address of the host.
-    file: ~/.SpechtLite/directiprange.conf
+    file: ~/.SpechtLite/directiprange.txt
     adapter: direct
   - type: list
   # Forward requests based on whether the host domain matches the given regular expressions.
-    file: ~/.SpechtLite/proxylist.conf
+    file: ~/.SpechtLite/proxylist.txt
     adapter: proxy
   - type: iplist
   # Forward requests based on the IP address of the host.
-    file: ~/.SpechtLite/proxyiprange.conf
+    file: ~/.SpechtLite/proxyiprange.txt
     adapter: proxy
   - type: list
   # Reject requests based on whether the host domain matches the given regular expressions.
-    file: ~/.SpechtLite/rejectlist.conf
+    file: ~/.SpechtLite/rejectlist.txt
     adapter: reject
   - type: iplist
   # Reject requests based on the IP address of the host.
-    file: ~/.SpechtLite/rejectiprange.conf
+    file: ~/.SpechtLite/rejectiprange.txt
     adapter: reject
   - type: country
   # When the location is unknown. Usually this means this is resolved an Intranet IP.
