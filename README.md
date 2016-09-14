@@ -1,6 +1,6 @@
 # SpechtLiteConf
 
-Configuration files of SpechtLite
+Configuration files of [SpechtLite](https://github.com/zhuhaow/SpechtLite)
 
 Please copy all files except **README.md** to your **_.SpechtLite_** folder
 
