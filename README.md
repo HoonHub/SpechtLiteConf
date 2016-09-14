@@ -4,17 +4,17 @@ This is a template for SpechtLite designed for Chinese users.
 
 ## Explanation of each file
 
-- [**Conf.yaml**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/Conf.yaml): Main configuration file, where all adapters and rules reside. You may want to copy and rename this file if you want to have several different settings to switch between.
+- [**Conf.yaml**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/Conf.yaml): The main configuration file, where all adapters and rules reside. You may want to copy and rename this file if you want to have several different settings to switch between.
 
-- [**pollutedip**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/pollutedip): Polluted IP Lists according to  [Wikipedia](https://zh.m.wikipedia.org/zh-cn/域名服务器缓存污染).
+- [**pollutedip**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/pollutedip): The list of DNS polluted IP addresses according to [Wikipedia](https://zh.m.wikipedia.org/zh-cn/域名服务器缓存污染).
 
-- [**directlist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/directlist): List of hosts that you want to connect directly, in regular expressions.
+- [**directlist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/directlist): The list of hosts that you want to connect directly, in regular expressions.
 
-- [**directiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/directiprange): List of ip ranges that you want to connect to directly without any proxy.
+- [**directiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/directiprange): The list of ip ranges that you want to connect to directly without any proxy.
 
-- [**proxylist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/proxylist): List of hosts that you want to connect to through proxy, in regular expressions.
+- [**proxylist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/proxylist): The list of hosts that you want to connect to through proxy, in regular expressions.
 
-- [**proxyiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/proxyiprange): List of ip ranges that you want to connect to through proxy.
+- [**proxyiprange**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/proxyiprange): The list of ip ranges that you want to connect to through proxy.
 
 - [**rejectlist**](https://github.com/HoonHwang/SpechtLiteConf/blob/master/rejectlist): Any hosts you want to block. Currectly it contains a set of ad sites.
 
