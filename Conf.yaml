@@ -35,7 +35,7 @@ adapter:
     port 3128
   # Speed adapter automatically connects to all specified adapters (with given delay) 
   # and uses the fastest one that becomes ready.
-  - id: speed
+  - id: proxy
     type: SPEED
     adapters:
       - id: adapter1
@@ -56,21 +56,33 @@ adapter:
 # Rule will be matched one by one.
 rule:
   - type: iplist
-  # Reject requests based on the IP address of the host.
-    file: ~/.SpechtLite/rejectiprange
-    adapter: reject
+  # Forward polluted host IP address
+    file: ~/.SpechtLite/pollutedip
+    adapter: proxy
   - type: list
-  # Reject requests based on whether the host domain matches the given regular expressions.
-    file: ~/.SpechtLite/rejectlist
-    adapter: reject
+  # Forward requests based on whether the host domain matches the given regular expressions.
+    file: ~/.SpechtLite/directlist
+    adapter: direct
+  - type: iplist
+  # Forward requests based on the IP address of the host.
+    file: ~/.SpechtLite/directiprange
+    adapter: direct
+  - type: list
+  # Forward requests based on whether the host domain matches the given regular expressions.
+    file: ~/.SpechtLite/proxylist
+    adapter: proxy
   - type: iplist
   # Forward requests based on the IP address of the host.
     file: ~/.SpechtLite/proxyiprange
     adapter: proxy
   - type: list
-  # Forward requests based on whether the host domain matches the given regular expressions.
-    file: ~/.SpechtLite/proxylist
-    adapter: proxy
+  # Reject requests based on whether the host domain matches the given regular expressions.
+    file: ~/.SpechtLite/rejectlist
+    adapter: reject
+  - type: iplist
+  # Reject requests based on the IP address of the host.
+    file: ~/.SpechtLite/rejectiprange
+    adapter: reject
   - type: country
   # When the location is unknown. Usually this means this is resolved an Intranet IP.
     country: CN
@@ -80,14 +92,6 @@ rule:
   # When the location is unknown. Usually this means this is resolved an Intranet IP.
     country: --
     match: true
-    adapter: direct
-  - type: iplist
-  # Forward requests based on the IP address of the host.
-    file: ~/.SpechtLite/directiprange
-    adapter: direct
-  - type: list
-  # Forward requests based on whether the host domain matches the given regular expressions.
-    file: ~/.SpechtLite/directlist
     adapter: direct
   - type: DNSFail
   # When the DNS lookup of the host fails.
