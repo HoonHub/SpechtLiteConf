@@ -24,7 +24,7 @@ The hosts and ips in **Reject** lists are from **逗bi极客**'s Surge rule.
 
 ## Get Up and Running
 
-Click **`Open config folder`** and copy all files except **README.md** to that (`.SpechLite`) folder. Set up the correct adapter configuration according to you proxy settings. Then **`Reload config`**.
+Click **`Open config folder`** and copy all files except **README.md** to that (`.SpechtLite`) folder. Set up the correct adapter configuration according to you proxy settings. Then **`Reload config`**.
 
 Start proxy by click the name of the config file in the menu, and check **`Set as system proxy`**. 
 Or you can set it yourself by setting system HTTP/HTTPS proxy to `127.0.0.1:port`, SOCKS5 proxy (this will proxy things such as Mail.app) to `127.0.0.1:port+1` in **System Preferences**.
