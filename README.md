@@ -21,7 +21,7 @@ This is a template for SpechtLite designed for Chinese users.
 
 - **rejectiprange**: Any IP ranges you want to block. Currectly it contains a set of ad sites.
 
-The hosts and ips in **Reject** lists are from **逗bi极客**'s Surge rule.
+The hosts and ips in **Reject** lists are reference to **[逗bi极客](http://www.yeshigeek.com/forum.php)**'s Surge rule.
 
 ## Get Up and Running
 1. Extract **`SpechtLiteConf.zip`** file to your temporary folder
