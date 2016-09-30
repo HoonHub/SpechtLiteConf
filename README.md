@@ -17,9 +17,9 @@ This is a template for SpechtLite designed for Chinese users.
 
 - **proxyiprange**: The list of ip ranges that you want to connect to through proxy.
 
-- **rejectlist**: Any hosts you want to block. Currectly it contains a set of ad sites.
+- **rejectlist**: The list of hosts that you want to block.
 
-- **rejectiprange**: Any IP ranges you want to block. Currectly it contains a set of ad sites.
+- **rejectiprange**: The list of ip ranges that you want to block.
 
   > ~~The hosts and ips in **Reject** lists are referenced from **[逗bi极客](http://www.yeshigeek.com/forum.php)**'s Surge rule.~~ <br>
 
